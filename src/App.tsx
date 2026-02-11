@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { AllocationPage } from './features/target-allocation/ui/AllocationPage'
 import { OptimizationDashboard } from './features/portfolio-optimization/ui/OptimizationDashboard'
+import { DiversificationDashboard } from './features/diversification/ui/DiversificationDashboard'
 
-type Page = 'allocation' | 'optimization'
+type Page = 'allocation' | 'diversification' | 'optimization'
 
 export function App() {
   const [page, setPage] = useState<Page>('allocation')
@@ -19,6 +20,12 @@ export function App() {
             Целевое распределение
           </button>
           <button
+            className={`nav-btn ${page === 'diversification' ? 'active' : ''}`}
+            onClick={() => setPage('diversification')}
+          >
+            Диверсификация
+          </button>
+          <button
             className={`nav-btn ${page === 'optimization' ? 'active' : ''}`}
             onClick={() => setPage('optimization')}
           >
@@ -28,6 +35,9 @@ export function App() {
       </header>
       <main className="app-main">
         {page === 'allocation' && <AllocationPage />}
+        {page === 'diversification' && (
+          <DiversificationDashboard report={null} onAnalyze={() => {}} />
+        )}
         {page === 'optimization' && (
           <OptimizationDashboard result={null} onRunAnalysis={() => {}} />
         )}

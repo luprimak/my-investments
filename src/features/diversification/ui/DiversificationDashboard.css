@@ -1,0 +1,258 @@
+.diversification-dashboard {
+  padding: 1rem 0;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.no-data-container {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #666;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+/* Score display */
+.score-display {
+  text-align: center;
+}
+
+.score-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.score-max {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.score-label {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Report overview */
+.report-overview {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.report-meta {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meta-label {
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 0.25rem;
+}
+
+.meta-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.meta-desc {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+/* Dimensions grid */
+.dimensions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dimension-breakdown {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.dimension-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.dimension-header h4 {
+  margin: 0;
+}
+
+.dimension-score {
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.score-excellent { background: #e3f2fd; color: #1565c0; }
+.score-good { background: #e8f5e9; color: #2e7d32; }
+.score-fair { background: #fff3e0; color: #e65100; }
+.score-poor { background: #ffebee; color: #c62828; }
+
+.dimension-hhi {
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 0.75rem;
+}
+
+/* Distribution bars */
+.distribution-item {
+  margin-bottom: 0.5rem;
+}
+
+.dist-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 0.15rem;
+}
+
+.dist-name {
+  color: #333;
+}
+
+.dist-percent {
+  font-weight: 600;
+  color: #666;
+}
+
+.dist-bar-bg {
+  height: 6px;
+  background: #f0f0f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.dist-bar-fill {
+  height: 100%;
+  background: #1976d2;
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+/* Warnings */
+.dimension-warnings {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.warning-item {
+  font-size: 0.8rem;
+  padding: 0.25rem 0;
+}
+
+.warning-critical { color: #c62828; }
+.warning-warning { color: #e65100; }
+.warning-info { color: #666; }
+
+/* Recommendations */
+.recommendations-panel {
+  margin-top: 1rem;
+}
+
+.recommendations-panel h3 {
+  margin-bottom: 0.5rem;
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+  color: #999;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.recommendations-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.div-rec-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.div-rec-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.div-rec-dimension {
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.div-rec-card h4 {
+  margin: 0 0 0.5rem;
+}
+
+.div-rec-description {
+  color: #666;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.suggested-actions {
+  list-style: none;
+  font-size: 0.875rem;
+}
+
+.suggested-actions li {
+  padding: 0.25rem 0;
+}
+
+.action-buy { color: #2e7d32; }
+.action-sell { color: #c62828; }
+.action-consider { color: #1565c0; }
+
+.no-data {
+  color: #999;
+  font-style: italic;
+}
