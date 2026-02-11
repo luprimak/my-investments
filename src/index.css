@@ -28,6 +28,32 @@
   font-weight: 600;
 }
 
+.app-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.nav-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.nav-btn.active {
+  background: #1976d2;
+  color: white;
+  border-color: #1976d2;
+}
+
+.nav-btn:hover:not(.active) {
+  background: #f0f0f0;
+}
+
 .app-main {
   padding: 1rem 0;
 }
