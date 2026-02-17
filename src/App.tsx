@@ -1,18 +1,25 @@
 import { useState } from 'react'
+import { PortfolioPage } from './features/portfolio-view/ui/PortfolioPage'
 import { AllocationPage } from './features/target-allocation/ui/AllocationPage'
 import { OptimizationDashboard } from './features/portfolio-optimization/ui/OptimizationDashboard'
 import { DiversificationDashboard } from './features/diversification/ui/DiversificationDashboard'
 
-type Page = 'allocation' | 'diversification' | 'optimization'
+type Page = 'portfolio' | 'allocation' | 'diversification' | 'optimization'
 
 export function App() {
-  const [page, setPage] = useState<Page>('allocation')
+  const [page, setPage] = useState<Page>('portfolio')
 
   return (
     <div className="app">
       <header className="app-header">
         <h1>Мои Инвестиции</h1>
         <nav className="app-nav">
+          <button
+            className={`nav-btn ${page === 'portfolio' ? 'active' : ''}`}
+            onClick={() => setPage('portfolio')}
+          >
+            Портфель
+          </button>
           <button
             className={`nav-btn ${page === 'allocation' ? 'active' : ''}`}
             onClick={() => setPage('allocation')}
@@ -34,6 +41,7 @@ export function App() {
         </nav>
       </header>
       <main className="app-main">
+        {page === 'portfolio' && <PortfolioPage />}
         {page === 'allocation' && <AllocationPage />}
         {page === 'diversification' && (
           <DiversificationDashboard report={null} onAnalyze={() => {}} />
