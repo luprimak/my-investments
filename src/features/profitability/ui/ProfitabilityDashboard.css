@@ -1,0 +1,259 @@
+.profitability-dashboard h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Portfolio summary */
+.portfolio-return-summary {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.return-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  flex: 1;
+  min-width: 130px;
+}
+
+.return-card-value {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.return-card-label {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.return-positive {
+  color: #2e7d32;
+}
+
+.return-negative {
+  color: #f44336;
+}
+
+.return-neutral {
+  color: #666;
+}
+
+/* Period selector */
+.period-selector {
+  display: flex;
+  gap: 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  width: fit-content;
+}
+
+.period-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: white;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #666;
+  border-right: 1px solid #e0e0e0;
+}
+
+.period-btn:last-child {
+  border-right: none;
+}
+
+.period-btn.active {
+  background: #1976d2;
+  color: white;
+}
+
+.period-btn:hover:not(.active) {
+  background: #f0f0f0;
+}
+
+/* Position returns table */
+.position-returns {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.position-returns h3 {
+  padding: 1rem 1.25rem 0.75rem;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.returns-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.returns-table th,
+.returns-table td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.returns-table th {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.returns-table td {
+  font-size: 0.875rem;
+}
+
+.returns-table .col-right {
+  text-align: right;
+}
+
+/* Return chart */
+.return-chart-section {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.return-chart-section h3 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+.return-bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bar-label {
+  width: 80px;
+  font-size: 0.8rem;
+  text-align: right;
+  flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bar-track {
+  flex: 1;
+  height: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bar-center {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #e0e0e0;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  position: absolute;
+  min-width: 2px;
+}
+
+.bar-fill.positive {
+  background: #4caf50;
+  left: 50%;
+}
+
+.bar-fill.negative {
+  background: #f44336;
+  right: 50%;
+}
+
+.bar-value {
+  font-size: 0.75rem;
+  color: #666;
+  width: 60px;
+  flex-shrink: 0;
+}
+
+/* Performers */
+.performers-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.performers-card {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.performers-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+.performer-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  font-size: 0.875rem;
+}
+
+.performer-return {
+  font-weight: 600;
+}
+
+/* No data */
+.profitability-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #666;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .portfolio-return-summary {
+    flex-direction: column;
+  }
+
+  .performers-section {
+    flex-direction: column;
+  }
+
+  .returns-table {
+    font-size: 0.8rem;
+  }
+
+  .bar-label {
+    width: 60px;
+    font-size: 0.7rem;
+  }
+}
