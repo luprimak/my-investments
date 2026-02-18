@@ -4,8 +4,9 @@ import { AllocationPage } from './features/target-allocation/ui/AllocationPage'
 import { OptimizationDashboard } from './features/portfolio-optimization/ui/OptimizationDashboard'
 import { DiversificationDashboard } from './features/diversification/ui/DiversificationDashboard'
 import { ProfitabilityDashboard } from './features/profitability/ui/ProfitabilityDashboard'
+import { MarketDataPage } from './features/market-data/ui/MarketDataPage'
 
-type Page = 'portfolio' | 'allocation' | 'diversification' | 'optimization' | 'profitability'
+type Page = 'portfolio' | 'allocation' | 'diversification' | 'optimization' | 'profitability' | 'market'
 
 export function App() {
   const [page, setPage] = useState<Page>('portfolio')
@@ -45,6 +46,12 @@ export function App() {
           >
             Доходность
           </button>
+          <button
+            className={`nav-btn ${page === 'market' ? 'active' : ''}`}
+            onClick={() => setPage('market')}
+          >
+            Биржа
+          </button>
         </nav>
       </header>
       <main className="app-main">
@@ -57,6 +64,7 @@ export function App() {
           <OptimizationDashboard result={null} onRunAnalysis={() => {}} />
         )}
         {page === 'profitability' && <ProfitabilityDashboard />}
+        {page === 'market' && <MarketDataPage />}
       </main>
     </div>
   )

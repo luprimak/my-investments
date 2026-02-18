@@ -1,0 +1,334 @@
+.market-data-page {
+  padding: 1rem 0;
+}
+
+.market-data-page h2 {
+  margin: 0 0 1.25rem 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.exchange-rates {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.rate-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.rate-chip .rate-pair {
+  color: #666;
+  font-weight: 500;
+}
+
+.rate-chip .rate-value {
+  font-weight: 600;
+  color: #333;
+}
+
+.search-section {
+  margin-bottom: 1.25rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.15);
+}
+
+.search-results {
+  margin-top: 0.5rem;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.search-result-item {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background: #f0f0f0;
+}
+
+.search-result-ticker {
+  font-weight: 600;
+  color: #1976d2;
+}
+
+.search-result-name {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.search-result-type {
+  font-size: 0.75rem;
+  color: #999;
+  padding: 0.15rem 0.4rem;
+  background: #f5f5f5;
+  border-radius: 3px;
+}
+
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.quote-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.quote-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.quote-card.selected {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.15);
+}
+
+.quote-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.4rem;
+}
+
+.quote-ticker {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #333;
+}
+
+.quote-name {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.quote-status {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.quote-status.open {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.quote-status.closed {
+  background: #f5f5f5;
+  color: #999;
+}
+
+.quote-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.quote-change {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.quote-change.positive {
+  color: #2e7d32;
+}
+
+.quote-change.negative {
+  color: #f44336;
+}
+
+.quote-change.neutral {
+  color: #666;
+}
+
+.quote-volume {
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 0.25rem;
+}
+
+.quote-bid-ask {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.detail-section {
+  margin-top: 1.25rem;
+}
+
+.detail-section h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.15rem;
+  color: #333;
+}
+
+.bond-details {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.bond-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.bond-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.bond-field-label {
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 0.15rem;
+}
+
+.bond-field-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.price-chart {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.chart-period-selector {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.chart-period-btn {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  color: #666;
+}
+
+.chart-period-btn:hover {
+  background: #f0f0f0;
+}
+
+.chart-period-btn.active {
+  background: #1976d2;
+  color: #fff;
+  border-color: #1976d2;
+}
+
+.chart-container {
+  position: relative;
+  height: 250px;
+}
+
+.chart-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-line {
+  fill: none;
+  stroke: #1976d2;
+  stroke-width: 2;
+}
+
+.chart-area {
+  fill: rgba(25, 118, 210, 0.08);
+}
+
+.chart-grid-line {
+  stroke: #f0f0f0;
+  stroke-width: 1;
+}
+
+.chart-label {
+  fill: #999;
+  font-size: 10px;
+}
+
+.chart-summary {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.chart-summary span {
+  font-weight: 600;
+  color: #333;
+}
+
+.no-selection {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .quotes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bond-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .exchange-rates {
+    flex-direction: column;
+  }
+}
