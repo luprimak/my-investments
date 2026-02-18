@@ -1,0 +1,347 @@
+.weight-page h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Progress bar */
+.progress-section {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.progress-bar-track {
+  height: 24px;
+  background: #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1976d2, #2e7d32);
+  border-radius: 12px;
+  transition: width 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: white;
+  font-weight: 600;
+  min-width: 40px;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.progress-start {
+  color: #999;
+}
+
+.progress-target {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+/* Summary cards */
+.weight-summary {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.weight-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  flex: 1;
+  min-width: 130px;
+}
+
+.weight-card-value {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.weight-card-label {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.change-good {
+  color: #2e7d32;
+}
+
+.change-bad {
+  color: #f44336;
+}
+
+.change-neutral {
+  color: #666;
+}
+
+/* Entry form */
+.entry-form {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.entry-form h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-field label {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.form-field input {
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.form-field input[type="number"] {
+  width: 100px;
+}
+
+.form-field input[type="date"] {
+  width: 160px;
+}
+
+.form-field input[type="text"] {
+  width: 200px;
+}
+
+/* Chart */
+.chart-section {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.chart-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.chart-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.chart-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-line {
+  fill: none;
+  stroke: #1976d2;
+  stroke-width: 2;
+}
+
+.chart-area {
+  fill: rgba(25, 118, 210, 0.1);
+}
+
+.chart-goal-line {
+  stroke: #2e7d32;
+  stroke-width: 1;
+  stroke-dasharray: 6 3;
+}
+
+.chart-dot {
+  fill: #1976d2;
+  cursor: pointer;
+}
+
+.chart-dot:hover {
+  fill: #0d47a1;
+  r: 5;
+}
+
+.chart-label {
+  font-size: 10px;
+  fill: #999;
+}
+
+.chart-goal-label {
+  font-size: 10px;
+  fill: #2e7d32;
+  font-weight: 600;
+}
+
+.chart-tooltip {
+  position: absolute;
+  background: #333;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* History table */
+.history-section {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.history-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table th,
+.history-table td {
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.history-table th {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.history-table td {
+  font-size: 0.875rem;
+}
+
+.history-table .col-right {
+  text-align: right;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.1rem 0.3rem;
+}
+
+.delete-btn:hover {
+  color: #f44336;
+}
+
+/* Stats section */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+/* No data state */
+.no-data {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Actions row */
+.actions-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .weight-summary {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-field input[type="number"],
+  .form-field input[type="date"],
+  .form-field input[type="text"] {
+    width: 100%;
+  }
+
+  .history-table {
+    font-size: 0.8rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -3,8 +3,9 @@ import { PortfolioPage } from './features/portfolio-view/ui/PortfolioPage'
 import { AllocationPage } from './features/target-allocation/ui/AllocationPage'
 import { OptimizationDashboard } from './features/portfolio-optimization/ui/OptimizationDashboard'
 import { DiversificationDashboard } from './features/diversification/ui/DiversificationDashboard'
+import { WeightPage } from './features/weight-tracker/ui/WeightPage'
 
-type Page = 'portfolio' | 'allocation' | 'diversification' | 'optimization'
+type Page = 'portfolio' | 'allocation' | 'diversification' | 'optimization' | 'weight'
 
 export function App() {
   const [page, setPage] = useState<Page>('portfolio')
@@ -38,6 +39,12 @@ export function App() {
           >
             Оптимизация
           </button>
+          <button
+            className={`nav-btn ${page === 'weight' ? 'active' : ''}`}
+            onClick={() => setPage('weight')}
+          >
+            Трекинг веса
+          </button>
         </nav>
       </header>
       <main className="app-main">
@@ -49,6 +56,7 @@ export function App() {
         {page === 'optimization' && (
           <OptimizationDashboard result={null} onRunAnalysis={() => {}} />
         )}
+        {page === 'weight' && <WeightPage />}
       </main>
     </div>
   )
