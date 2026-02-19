@@ -5,8 +5,9 @@ import { OptimizationDashboard } from './features/portfolio-optimization/ui/Opti
 import { DiversificationDashboard } from './features/diversification/ui/DiversificationDashboard'
 import { ProfitabilityDashboard } from './features/profitability/ui/ProfitabilityDashboard'
 import { MarketDataPage } from './features/market-data/ui/MarketDataPage'
+import { BrokerPage } from './features/broker-integration/ui/BrokerPage'
 
-type Page = 'portfolio' | 'allocation' | 'diversification' | 'optimization' | 'profitability' | 'market'
+type Page = 'portfolio' | 'allocation' | 'diversification' | 'optimization' | 'profitability' | 'market' | 'brokers'
 
 export function App() {
   const [page, setPage] = useState<Page>('portfolio')
@@ -52,6 +53,12 @@ export function App() {
           >
             Биржа
           </button>
+          <button
+            className={`nav-btn ${page === 'brokers' ? 'active' : ''}`}
+            onClick={() => setPage('brokers')}
+          >
+            Счета
+          </button>
         </nav>
       </header>
       <main className="app-main">
@@ -65,6 +72,7 @@ export function App() {
         )}
         {page === 'profitability' && <ProfitabilityDashboard />}
         {page === 'market' && <MarketDataPage />}
+        {page === 'brokers' && <BrokerPage />}
       </main>
     </div>
   )
